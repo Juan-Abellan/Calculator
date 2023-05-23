@@ -1,4 +1,15 @@
 from art import logo
+from os import system, name
+
+def clear():
+
+    # for windows
+    if name == 'nt':
+        _ = system('cls')
+
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        _ = system('clear')
 
 
 def add(n1, n2):
@@ -63,6 +74,7 @@ def calculator():
         else:
             still = False
             print("Thanks for using Juaninschen-Calculator!\n")
+            clear()
             calculator()
 
     # print(f"""
@@ -80,7 +92,7 @@ def calculator():
     # result2 = chosen_operation2(n1=result1, n2=num3)
     # print(
     #     f"{result1} {oper2} {num3} = {result2}")
-    # 
+    #
     # print(f"""
     # TESTING ............................................................... ..........................................
     # {type(oper2) = }
